@@ -17,10 +17,10 @@ function scrollToTop() {
 
 export default function ButtonUp() {
   const [show, setShow] = useState(false);
-  const { scrollY }: any = useScroll();
+  const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", () => {
-    if (scrollY.current > 250) {
+    if (scrollY.get() > 250) {
       setShow(true);
     } else {
       setShow(false);
