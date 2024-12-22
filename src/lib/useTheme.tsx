@@ -22,7 +22,9 @@ export default function useTheme() {
       root.classList.remove("dark");
       root.classList.add("light");
     }
-    typeof window !== "undefined" && localStorage.setItem("theme", theme);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", theme);
+    }
   }, [theme]);
 
   const toggleTheme = () =>

@@ -1,8 +1,6 @@
 import ZoomImage from "./components/zoom-image";
 
-type Props = {};
-
-export default function Home({}: Props) {
+export default function Home() {
   return (
     <>
       <div className="h-[100vh] p-4">Home</div>
