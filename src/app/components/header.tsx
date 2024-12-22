@@ -11,11 +11,11 @@ import ThemeToggle from "./ui/theme-toggle";
 
 const Header = () => {
   const [scrollUp, setScrollUp] = useState(true);
-  const { scrollY }: any = useScroll();
+  const { scrollY } = useScroll();
 
-  useMotionValueEvent(scrollY, "change", (latest: any) => {
-    const previousScrollY = scrollY.getPrevious();
-    if (latest > previousScrollY) {
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previousScrollY: number | undefined = scrollY.getPrevious();
+    if (previousScrollY && latest > previousScrollY) {
       setScrollUp(false);
     } else {
       setScrollUp(true);
