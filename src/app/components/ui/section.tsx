@@ -73,7 +73,7 @@ type AnimBtnProps = {
 
 function AnimatedButton({ isInView, setModal, maxWidth, text }: AnimBtnProps) {
   return (
-    <div className="absolute h-full py-10 flex items-end z-30">
+    <div className="absolute h-full py-5 flex items-end z-30">
       <AnimatePresence initial={false}>
         {isInView && (
           <motion.div
