@@ -15,7 +15,7 @@ const iconVariants = {
   exit: {
     scale: [1, 0],
     opacity: [1, 0],
-    transition: { ease: easing },
+    transition: { duration: 0.2, ease: easing },
   },
 };
 
@@ -25,7 +25,7 @@ const textVariants = {
     opacity: 1,
     transition: { delay: 0.4 },
   },
-  exit: { opacity: 0 },
+  exit: { duration: 0.2, opacity: 0 },
 };
 
 type Props = {
@@ -117,10 +117,10 @@ function AnimatedButton({ isInView, setModal, maxWidth, text }: AnimBtnProps) {
               initial={"initial"}
               animate={"animate"}
               exit={"exit"}
-              className="absolute right-2 top-2 h-10 w-10 rounded-full bg-blue-500 flex items-center justify-center"
+              className="absolute right-2 top-2 h-10 w-10 rounded-full bg-red-600 flex items-center justify-center"
             >
-              <span className="w-4 h-[3px] rounded-md bg-blue-100"></span>
-              <span className="absolute rotate-90 w-4 h-[3px] rounded-md bg-blue-100"></span>
+              <span className="w-4 h-[3px] rounded-md bg-white"></span>
+              <span className="absolute rotate-90 w-4 h-[3px] rounded-md bg-white"></span>
             </motion.div>
           </motion.div>
         )}
